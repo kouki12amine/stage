@@ -9,3 +9,5 @@ note
 ![image](https://user-images.githubusercontent.com/49404635/151786165-6515505c-8f52-4d1f-8799-199c9f1e8660.png)
 
 
+
+DEPLOY link  https://cni-evaluation.web.app
