@@ -6,14 +6,14 @@ function Formation() {
     return (
         <React.Fragment>
             <Topnavigation />
-            <div class="content-group">
-                <div class="content-add">
+            <div className="content-group">
+                <div className="content-add">
                     <a href="#">
-                        <div class="add-logo">
+                        <div className="add-logo">
                             <AddLogo />
                         </div>
                     </a>
-                    <h1 class="title">
+                    <h1 className="title">
                         Ajouter une formation
                     </h1>
                 </div>
@@ -28,13 +28,13 @@ function Formation() {
 
 
 const Formations = ({ icon, text }) => (
-    <div class="content-add">
+    <div className="content-add">
         <a href="#">
-            <div class="formation-logo">
+            <div className="formation-logo">
                 {icon}
             </div>
         </a>
-        <h1 class="title">
+        <h1 className="title">
             {text}
         </h1>
     </div>

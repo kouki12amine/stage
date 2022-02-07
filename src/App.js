@@ -1,6 +1,6 @@
 
 import Appbar from './pages/Appbar';
-
+import React from "react"
 import Formation from './pages/Formation';
 import Reviewpage from './pages/Reviewpage';
 import WelcomePage from './pages/WelcomePage';
@@ -10,10 +10,10 @@ import {   Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-  <div class="container">
-    <div class="screen">
+  <div className="container">
+    <div className="screen">
         <Appbar />
-        <div class="content-section">
+        <div className="content-section">
           <Routes>
               <Route exact  path="/" element={<WelcomePage /> }/>
               <Route path="/Formation" element={<Formation />} />
