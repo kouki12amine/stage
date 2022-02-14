@@ -9,6 +9,8 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "@use-it/interval": "^1.0.0",
+    "firebase": "^9.6.6",
     "lottie-react": "^2.2.1",
     "radioslider": "^1.0.0-beta.1",
     "react": "^17.0.2",
@@ -16,7 +18,10 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-stepzilla": "^7.0.0",
+    "react-tabs": "^3.2.3",
     "react-type-animation": "^1.1.2",
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.12",
     "web-vitals": "^2.1.2"
   },
   "scripts": {

@@ -1,15 +1,16 @@
-
+import Contactpage from "./pages/Contactpage"
 import Appbar from './pages/Appbar';
 import React from "react"
 import Formation from './pages/Formation';
 import Reviewpage from './pages/Reviewpage';
 import WelcomePage from './pages/WelcomePage';
 import {   Route, Routes } from 'react-router-dom'
-
-
+import Suggestions from  "./pages/admin/Suggestions"
+import AddFormation from "./pages/admin/AddFormation"
+import AdminDisplayFormation  from "./pages/admin/AdminDisplayFormation"
 
 function App() {
-  return (
+ return (
   <div className="container">
     <div className="screen">
         <Appbar />
@@ -18,13 +19,16 @@ function App() {
               <Route exact  path="/" element={<WelcomePage /> }/>
               <Route path="/Formation" element={<Formation />} />
               <Route path="/Formation/:id" element={<Reviewpage />} />
-              <Route path="/Contact" element={<Formation />} />
-              <Route path="/Admin" element={<Formation />} />
+              <Route path="/Contact" element={<Contactpage />} />
+              <Route path="/Suggestion" element={<Suggestions />} />
+              <Route path="/AddFormation" element={<AddFormation />} />
+              <Route  exact  path="/Admin/*" element={<AdminDisplayFormation />} />
          </Routes>
         </div>
     </div>
   </div>
-  )
-}
+ )
+ }
+
 
 export default App

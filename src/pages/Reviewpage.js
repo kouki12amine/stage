@@ -1,33 +1,38 @@
-import React ,{useState} from 'react';
+import React from 'react';
 import FirstStep from './steps/FirstStep'
+import  SecandStep from "./steps/SecandStep"
+import ThirdStep from "./steps/ThirdStep"
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import Topnavigation from "./Topnavigation"
+import {useState} from "react"
 
 
 function Reviewpage() {
-    const [step, setStep] = useState(1);
-
-    const  nextStep = () => {
-        const { step } = this.state;
-        this.setState({
-          step: step + 1
-        });
-      };
-    
-      // Go back to prev step
-      const prevStep = () => {
-        const { step } = this.state;
-        this.setState({
-          step: step - 1
-        });
-      };
-    
-      // Handle fields change
-      handleChange = input => e => {
-        this.setState({ [input]: e.target.value });
-      };
+  const [tabIndex, setTabIndex] = useState(0);
   return (
-      <React.Fragment>
-            <FirstStep />
-      </React.Fragment>
+
+  <div className='content-group'>
+  <Topnavigation />
+  <Tabs className="res" >
+        <TabList  className="tabs-title">
+              <Tab >Title 1</Tab>
+              <Tab>Title 2</Tab>
+              <Tab>Title 3</Tab>
+        </TabList>
+            <div className="container">
+                  <TabPanel className="content-tabs">
+                        <FirstStep />
+                  </TabPanel>
+                  <TabPanel className="content-tabs">
+                          <SecandStep />
+                    </TabPanel>
+                    <TabPanel className="content-tabs">
+                          <ThirdStep />
+                    </TabPanel>
+            </div>
+   </Tabs>
+  </div>
   );
 }
 
