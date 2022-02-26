@@ -1,11 +1,14 @@
 import React from 'react';
 import Welcome from "../resources/Welcome"
 import TypeAnimation from 'react-type-animation';
-import Backgroundwel from '../resources/Backgroundwel'
-import MatrixRain from "../resources/MatrixRain"
+import { useNavigate } from 'react-router-dom';
+
+
 
 
 function WelcomePage() {
+    const navigate = useNavigate();
+    const handleClick = () => { navigate('/Contact') }
     return (
         <div className="content-welcome">
             <div className="welcome-text">
@@ -27,8 +30,8 @@ function WelcomePage() {
                 <div className="welcome-text-btn">
                     fiche d'appreciation qualitative
                 </div>
-                <div className="btn-glass-text">
-                    click here
+                <div className="btn-glass-text" onClick={() => handleClick()}>
+                    Contact us
                 </div>
             </div>
             <div className="welcome-animation">

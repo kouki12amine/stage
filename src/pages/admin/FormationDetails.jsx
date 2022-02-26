@@ -24,12 +24,6 @@ function FormationDetails() {
         await deleteDoc(docRef);
     };
 
-    function EditFormation(formationDetails) {
-        const docRef = doc(db, "Formation", params.id);
-        console.log(formationDetails)
-        updateDoc(docRef, formationDetails)
-    }
-
 
     const handleEdit = async () => {
 
@@ -44,39 +38,30 @@ function FormationDetails() {
 
     return (
         <React.Fragment>
-            <div className="text-segs-formation">
-                {formations.nomFormation}
-            </div>
-            <div className="update-formation">
-                <div className="inputs">
-                    <div className='form-input'>
-                        <div className='input-x'>
-                            <div className='input-y'>
-                                <label for="nom">Nom formation</label>
-                                <input defaultValue={formations.nomFormation} placeholder="Nom" type="text" className='input-desgn' name="nomFormation" id="nom" onChange={(e) => setFomFormations(e.target.value)} />
-                            </div>
-                            <div className='input-y'>
-                                <label for="tel">Nom formateur</label>
-                                <input defaultValue={formations.nomformateur} placeholder="Tel" type="text" className='input-desgn' name="nomformateur" id="tel" onChange={(e) => setNomformateurs(e.target.value)} />
-                            </div>
-                            <div className='input-y'>
-                                <label for="tel">Lieu formation</label>
-                                <input defaultValue={formations.lieuFormation} placeholder="Tel" type="text" className='input-desgn' name="LieuFormation" id="tel" onChange={(e) => setLieuFormations(e.target.value)} />
-                            </div>
-                            <div className='input-y'>
-                                <label for="fax" >Date formation</label>
-                                <input defaultValue={formations.dateFormation} placeholder="Fax" type="text" className='input-desgn' name="DateFormation" id="fax" onChange={(e) => setDateFormations(e.target.value)} />
-                            </div>
-                            <div className='input-y'>
-                                <label for="email" >Etablissement</label>
-                                <input defaultValue={formations.etablissement} placeholder="Email" type="email" className='input-desgn' name="etablissement" id="email" onChange={(e) => setEtablissements(e.target.value)} />
-                            </div>
-                        </div>
-                        <div className="formation-btn" onClick={() => handleClick()}>
-                            <div className="update-btn" onClick={() => EditFormation({ nomFormations, nomformateurs, lieuFormations, dateFormations, etablissements })}>update</div>
-                            <div className="delete-btn" onClick={() => handleDelete(params.id)}> delete</div>
-                        </div>
+            <div className="all-formation">
+                <div className="text-segs-formation">
+                    {formations.nomFormation}
+                </div>
+                <div className="update-formation">
+                    <div className="formdetails">
+                        <div className="noms">Nom Formateur</div>
+                        <div className="details">{formations.nomformateur}</div>
                     </div>
+                    <div className="formdetails">
+                        <div className="noms">lieux Formation</div>
+                        <div className="details"> {formations.lieuFormation}</div>
+                    </div>
+                    <div className="formdetails">
+                        <div className="noms">Date formation</div>
+                        <div className="details"> {formations.dateFormation}</div>
+                    </div>
+                    <div className="formdetails">
+                        <div className="noms">etablissement</div>
+                        <div className="details">  {formations.etablissement}</div>
+                    </div>
+                </div>
+                <div className="formation-btn" onClick={() => handleClick()}>
+                    <div className="delete-btn" onClick={() => handleDelete(params.id)}> delete</div>
                 </div>
             </div>
         </React.Fragment>

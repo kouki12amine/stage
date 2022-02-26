@@ -16,6 +16,9 @@ function Displayformation() {
 
     return (
         <React.Fragment>
+            <Link to={`/Admin/AddFormation`} className="text-link">
+                <FormationList nomFormation="ajouter formation" />
+            </Link>
             {formations?.map((formation) => (
                 <Link key={formation.id} to={`/Admin/${formation.id}`} className="text-link">
                     <FormationList key={formation.id}

@@ -68,12 +68,12 @@ function Contactpage() {
                     <label for="nom">Suggestions </label>
                     <textarea placeholder="Suggestions" type="email" className='input-desgn' name="email" id="email" onChange={(e) => setSuggestions(e.target.value)} />
                 </div>
-            </div>
-            <div className="contact-animation">
-                <Contactus />
                 <div className="send-btn" onClick={() => addContactForm({ suggestions, nom, email, fax, tel, id: uuidv4() })}>
                     Envoyer
                 </div>
+            </div>
+            <div className="contact-animation">
+                <Contactus />
             </div>
         </div>
     );

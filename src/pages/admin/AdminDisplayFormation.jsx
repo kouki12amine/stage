@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Displayformation from "./Displayformation"
 import FormationDetails from "./FormationDetails"
-import { Route, Routes } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import AddFormation from "./AddFormation"
+import { Route, Routes, Link } from 'react-router-dom'
+
 
 
 
 function AdminDisplayFormation() {
-    let params = useParams();
     return (
         <React.Fragment>
             <div className="formation-field">
@@ -17,8 +17,12 @@ function AdminDisplayFormation() {
                 <div className="formation-details">
                     <Routes>
                         <Route exact path="/:id" element={<FormationDetails />} />
+                        <Route path="/AddFormation" element={<AddFormation />} />
                     </Routes>
                 </div>
+                <Link to={`/Admin/Suggestion`} className="text-link">
+                    <div className="contact-btn">contact</div>
+                </Link>
             </div>
         </React.Fragment>
     );

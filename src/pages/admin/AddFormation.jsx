@@ -52,12 +52,13 @@ function AddFormation() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="contact-animation">
-                <div className="send-btn" onClick={() => addFormation({ id: uuidv4(), nomFormation, nomformateur, lieuFormation, dateFormation, etablissement })}>
-                    Ajouter
+                <div className="contact-animation">
+                    <div className="send-btn" onClick={() => addFormation({ id: uuidv4(), nomFormation, nomformateur, lieuFormation, dateFormation, etablissement })}>
+                        Ajouter
+                    </div>
                 </div>
             </div>
+
         </div>
     );
 }
