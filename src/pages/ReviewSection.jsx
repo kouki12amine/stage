@@ -20,10 +20,10 @@ function ReviewSection({ text, radioId }) {
             <div className="radio-container">
                 <p>
                     <Select>
-                        <option value="">Tres bien</option>
-                        <option value="">bien</option>
-                        <option value="">moyen</option>
-                        <option value="">non satisfait</option>
+                        <option value="Tres bien">Tres bien</option>
+                        <option value="bien">bien</option>
+                        <option value="moyen">moyen</option>
+                        <option value="non satisfait">non satisfait</option>
                     </Select>
 
                 </p>

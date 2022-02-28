@@ -7,6 +7,8 @@ import WelcomePage from './pages/WelcomePage';
 import {   Route, Routes } from 'react-router-dom'
 import Suggestions from  "./pages/admin/Suggestions"
 import AdminDisplayFormation  from "./pages/admin/AdminDisplayFormation"
+import Login from "./pages/Login";
+
 
 function App() {
  return (
@@ -19,6 +21,7 @@ function App() {
               <Route path="/Formation" element={<Formation />} />
               <Route path="/Formation/:id" element={<Reviewpage />} />
               <Route path="/Contact" element={<Contactpage />} />
+              <Route path="/Login" element={<Login />} />
               <Route path="/Admin/Suggestion" element={<Suggestions />} />
               <Route  exact  path="/Admin/*" element={<AdminDisplayFormation />} />
          </Routes>

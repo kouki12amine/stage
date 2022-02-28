@@ -30,6 +30,7 @@ function FormationDetails() {
         const docRef = doc(db, "Formation", params.id);
         const docSnap = await getDoc(docRef);
         setFormations(docSnap.data())
+        console.log(formations)
     }
 
     useEffect(() => {
@@ -54,6 +55,10 @@ function FormationDetails() {
                     <div className="formdetails">
                         <div className="noms">Date formation</div>
                         <div className="details"> {formations.dateFormation}</div>
+                    </div>
+                    <div className="formdetails">
+                        <div className="noms">etablissement</div>
+                        <div className="details">  {formations.etablissement}</div>
                     </div>
                     <div className="formdetails">
                         <div className="noms">etablissement</div>
